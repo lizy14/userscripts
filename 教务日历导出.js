@@ -1,0 +1,48 @@
+ics="BEGIN:VCALENDAR\nVERSION:2.0\nMETHOD:PUBLISH\n";
+name='教学日历';
+ics+='X-WR-CALNAME:'+name+'\n'+'X-WR-CALDESC:'+name+'\n';
+function parseDateTime(date, time){
+	//20140922T093500
+	str=date+'';
+	ret=str.substr(1,4)+str.substr(6,2)+str.substr(9,2);
+	str=time+'';
+	str=str.match(/(.+)[：:](.+)/);
+	if(str[1].length==1)
+		if(str[1]==8)
+			str[1]='0'+str[1];
+		else
+			str[1]=parseInt(str[1])+12;
+	ret+='T'+str[1]+str[2]+'00';
+	return ret;
+}
+function addNewItem(date, start, end, title, location){
+	event ='BEGIN:VEVENT\n';
+	event+='SUMMARY:'+title+'\nCLASS:PUBLIC\n';
+	event+='DTSTART;TZID=Asia/Harbin:'+parseDateTime(date, start)+'\n';
+	event+='DTEND;TZID=Asia/Harbin:'+parseDateTime(date, end)+'\n';
+	event+='LOCATION:'+location+'\n';
+	event+='END:VEVENT\n';
+	//console.log(date, start, end, title, location);
+	ics+=event;
+}
+tables=document.querySelectorAll('table');
+for(i=1;i<tables.length;i+=2){
+	date=tables[i].querySelector('td').innerText;
+	trs =tables[i+1].querySelectorAll('tr');
+	for(j=1;j<trs.length;j++){
+		tds = trs[j].querySelectorAll('td');
+		addNewItem(date, tds[0].innerText, tds[1].innerText, tds[3].innerText+tds[2].innerText, tds[4].innerText);
+	}
+	
+}
+ics+="BEGIN:VTIMEZONE\nTZID:Asia/Shanghai\nTZURL:http://tzurl.org/zoneinfo/Asia/Shanghai\nX-LIC-LOCATION:Asia/Shanghai\nBEGIN:STANDARD\nTZOFFSETFROM:+080543\nTZOFFSETTO:+0800\nTZNAME:CST\nDTSTART:19010101T000000\nRDATE:19010101T000000\nEND:STANDARD\nBEGIN:DAYLIGHT\nTZOFFSETFROM:+0800\nTZOFFSETTO:+0900\nTZNAME:CDT\nDTSTART:19400603T000000\nRDATE:19400603T000000\nRDATE:19410316T000000\nRDATE:19860504T000000\nRDATE:19870412T000000\nRDATE:19880410T000000\nRDATE:19890416T000000\nRDATE:19900415T000000\nRDATE:19910414T000000\nEND:DAYLIGHT\nBEGIN:STANDARD\nTZOFFSETFROM:+0900\nTZOFFSETTO:+0800\nTZNAME:CST\nDTSTART:19401001T000000\nRDATE:19401001T000000\nRDATE:19411001T000000\nRDATE:19860914T000000\nRDATE:19870913T000000\nRDATE:19880911T000000\nRDATE:19890917T000000\nRDATE:19900916T000000\nRDATE:19910915T000000\nEND:STANDARD\nBEGIN:STANDARD\nTZOFFSETFROM:+0800\nTZOFFSETTO:+0800\nTZNAME:CST\nDTSTART:19490101T000000\nRDATE:19490101T000000\nEND:STANDARD\nEND:VTIMEZONE\nBEGIN:VTIMEZONE\nTZID:Asia/Shanghai\nTZURL:http://tzurl.org/zoneinfo/Asia/Shanghai\nX-LIC-LOCATION:Asia/Shanghai\nBEGIN:STANDARD\nTZOFFSETFROM:+080543\nTZOFFSETTO:+0800\nTZNAME:CST\nDTSTART:19010101T000000\nRDATE:19010101T000000\nEND:STANDARD\nBEGIN:DAYLIGHT\nTZOFFSETFROM:+0800\nTZOFFSETTO:+0900\nTZNAME:CDT\nDTSTART:19400603T000000\nRDATE:19400603T000000\nRDATE:19410316T000000\nRDATE:19860504T000000\nRDATE:19870412T000000\nRDATE:19880410T000000\nRDATE:19890416T000000\nRDATE:19900415T000000\nRDATE:19910414T000000\nEND:DAYLIGHT\nBEGIN:STANDARD\nTZOFFSETFROM:+0900\nTZOFFSETTO:+0800\nTZNAME:CST\nDTSTART:19401001T000000\nRDATE:19401001T000000\nRDATE:19411001T000000\nRDATE:19860914T000000\nRDATE:19870913T000000\nRDATE:19880911T000000\nRDATE:19890917T000000\nRDATE:19900916T000000\nRDATE:19910915T000000\nEND:STANDARD\nBEGIN:STANDARD\nTZOFFSETFROM:+0800\nTZOFFSETTO:+0800\nTZNAME:CST\nDTSTART:19490101T000000\nRDATE:19490101T000000\nEND:STANDARD\nEND:VTIMEZONE\n";
+ics+="END:VCALENDAR";
+
+window.open("data:text/calendar,"+ics.replace(/\n/g,"%0d"));
+/*
+obj=document.createElement;
+obj=document.createElement('a');
+obj.innerHTML="导出本页日历...";
+obj.onClick='window.open("data:text/calendar,'+ics.replace(/\n/g,"%0d")+'")';
+document.body.insertBefore(obj, document.body.getElementsByTagName('title')[0]);
+*/
