@@ -21,8 +21,10 @@
 
 
 ## 教务日历导出
-由教务系统的日历网页生成 ical 文件
+由教务系统的日历网页生成 `ical` 文件
 
+## 校历生成器
+根据开学日期、周数生成一系列日程（`VEVENT`），可放入 `ical` 文件中
 
 ## 薛定谔的查分
-请移步[本人另一repo](https://github.com/lizy14/schrodinger-grade-with-sdk)
+removed. 请移步[本人另一repo](https://github.com/lizy14/schrodinger-grade-with-sdk)
