@@ -1,30 +1,37 @@
-# ×ÔÓÃµÄÈô¸É UserScript
+# è‡ªç”¨çš„è‹¥å¹² UserScript
 
-Ö»ÔÚ Google Chrome, Tampermonkey »·¾³ÏÂ²âÊÔ¹ı
+åªåœ¨ Google Chrome, Tampermonkey ç¯å¢ƒä¸‹æµ‹è¯•è¿‡
 
-## °Ù¶ÈËÑË÷Ìí¼Ó¡°¹È¸èÒ»ÏÂ¡±°´Å¥
+## ç™¾åº¦æœç´¢æ·»åŠ â€œè°·æ­Œä¸€ä¸‹â€æŒ‰é’®
 
-µã»÷ºóÓÃ¹È¸èËÑËØµ±Ç°¹Ø¼ü´Ê
+ç‚¹å‡»åç”¨è°·æ­Œæœç´ å½“å‰å…³é”®è¯
 
-![°Ù¶ÈËÑË÷Ğ§¹ûÍ¼](https://raw.githubusercontent.com/lizy14/userscripts/master/demo/baidu.png)
-
-
-## Î¬»ù°Ù¿ÆÓÅ»¯
-
-´ÊÌõ±êÌâÅÔ±ßÌí¼ÓÓ¢ÎÄ±êÌâ¡¢Ôö¼Ó¸Ä±ä¸ñÊ½µÄÑ¡Ïî
-
-![Î¬»ù°Ù¿ÆĞ§¹ûÍ¼](https://raw.githubusercontent.com/lizy14/userscripts/master/demo/wikipedia.png)
+![ç™¾åº¦æœç´¢æ•ˆæœå›¾](https://raw.githubusercontent.com/lizy14/userscripts/master/demo/baidu.png)
 
 
-## ÍøÂçÑ§ÌÃÇ°¶Ë¶àÏîÓÅ»¯
-ÎŞÍ¼ÎŞÕæÏà
+## ç»´åŸºç™¾ç§‘ä¼˜åŒ–
+
+è¯æ¡æ ‡é¢˜æ—è¾¹æ·»åŠ è‹±æ–‡æ ‡é¢˜ã€å¢åŠ æ”¹å˜æ ¼å¼çš„é€‰é¡¹
+
+![ç»´åŸºç™¾ç§‘æ•ˆæœå›¾](https://raw.githubusercontent.com/lizy14/userscripts/master/demo/wikipedia.png)
 
 
-## ½ÌÎñÈÕÀúµ¼³ö
-ÓÉ½ÌÎñÏµÍ³µÄÈÕÀúÍøÒ³Éú³É `ical` ÎÄ¼ş
+## æ¸…åæ ¡å†…ç«™ç‚¹å‰ç«¯é¡µé¢ä¼˜åŒ–
 
-## Ğ£ÀúÉú³ÉÆ÷
-¸ù¾İ¿ªÑ§ÈÕÆÚ¡¢ÖÜÊıÉú³ÉÒ»ÏµÁĞÈÕ³Ì£¨`VEVENT`£©£¬¿É·ÅÈë `ical` ÎÄ¼şÖĞ
+### è€ç‰ˆç½‘ç»œå­¦å ‚å¤šé¡¹ä¼˜åŒ–
+![æ•ˆæœå›¾](https://raw.githubusercontent.com/lizy14/userscripts/master/demo/oldlearn.jpg)
 
-## Ñ¦¶¨ÚÌµÄ²é·Ö
-removed. ÇëÒÆ²½[±¾ÈËÁíÒ»repo](https://github.com/lizy14/schrodinger-grade-with-sdk)
+### æ–°ç‰ˆç½‘ç»œå­¦å ‚ä½œä¸šè¯¦æƒ…é¡µ
+![æ•ˆæœå›¾](https://raw.githubusercontent.com/lizy14/userscripts/master/demo/newlearnHW.png)
+
+### é€‰è¯¾ç³»ç»Ÿâ€œå¡«æŠ¥å¿—æ„¿æƒ…å†µæŸ¥è¯¢â€ç»“æœé«˜äº®
+![æ•ˆæœå›¾](https://raw.githubusercontent.com/lizy14/userscripts/master/demo/xuankezhiyuan.png)
+
+### æ•™åŠ¡æ—¥å†å¯¼å‡º
+ç”±æ•™åŠ¡ç³»ç»Ÿçš„æ—¥å†ç½‘é¡µç”Ÿæˆ `ical` æ–‡ä»¶
+
+### æ ¡å†ç”Ÿæˆå™¨
+æ ¹æ®å¼€å­¦æ—¥æœŸã€å‘¨æ•°ç”Ÿæˆä¸€ç³»åˆ—æ—¥ç¨‹ï¼ˆ`VEVENT`ï¼‰ï¼Œå¯æ”¾å…¥ `ical` æ–‡ä»¶ä¸­
+
+### è–›å®šè°”çš„æŸ¥åˆ†
+removed. è¯·ç§»æ­¥[æœ¬äººå¦ä¸€repo](https://github.com/lizy14/schrodinger-grade-with-sdk)
